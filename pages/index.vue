@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     {{users}}
+    {{users}}
   </div>
 </template>
 
