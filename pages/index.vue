@@ -1,20 +1,18 @@
 <template>
   <div class="container">
-    {{users}}
-    {{users}}
+    <p>{{message}}</p>
+    <hr>
+    <router-link to="/price">Price Page!</router-link>
+    <router-link to="/Counter">Counter Page!</router-link>
   </div>
 </template>
 
 <script>
-const axios = require('axios')
-let url = 'https://jsonplaceholder.typicode.com/users'
-
 export default {
-  asyncData ({params}) {
-    return axios.get(url)
-      .then((res) => {
-        return { users : res.data }
-      })
+  data: function() {
+    return {
+      message: 'Hello,vue.js!'
+    }
   }
 }
 </script>
